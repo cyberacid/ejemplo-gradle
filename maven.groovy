@@ -13,7 +13,7 @@ def call(){
   }
   stage("Paso 3: Build .Jar"){
     sh "mvn clean package -e"
-  }
+  }/*
   stage("Paso 4: Sonar - Análisis Estático"){
       sh "echo 'Análisis Estático!'"
       withSonarQubeEnv('sonarqube') {
@@ -52,6 +52,6 @@ def call(){
   }
   stage("Paso 9: Testear Artefacto - Dormir(Esperar 20sg) "){
       sh "sleep 20 && curl -X GET 'http://localhost:8081/rest/mscovid/test?msg=testing'"
-  }
+  }*/
 }
 return this;
