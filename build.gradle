@@ -23,7 +23,6 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.6'
     runtimeOnly 'org.springframework.boot:spring-boot-devtools:2.3.4.RELEASE'
     testImplementation 'org.springframework.boot:spring-boot-starter-test:2.3.4.RELEASE'
-    classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:${project.properties.get('sonarqubeVersion', 3.0)}"
 }
 
 group = 'com.devopsusach2020'
@@ -41,6 +40,12 @@ publishing {
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
+}
+
+buildscript {
+    dependencies.classpath
+    "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:
+    ${project.properties.get('sonarqubeVersion', 3.0)}"
 }
 
 test {
