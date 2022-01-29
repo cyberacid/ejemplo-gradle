@@ -1,4 +1,4 @@
-# Getting Started
+# Getting Start
 Nuevo Test
 ## Windows
 ​
