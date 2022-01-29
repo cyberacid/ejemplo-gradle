@@ -3,9 +3,6 @@
  *
  * This project uses @Incubating APIs which are subject to change.
  */
-buildscript {
-    dependencies.classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:${project.properties.get('sonarqubeVersion', 3.0)}"
-}
 
 plugins {
     id 'java'
