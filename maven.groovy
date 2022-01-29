@@ -30,7 +30,7 @@ def call(){
           [$class: 'MavenPackage',
               mavenAssetList: [
                   [classifier: '',
-                  extension: '.jar',
+                  extension: 'jar',
                   filePath: 'build/DevOpsUsach2020-0.0.1.jar'
               ]
           ],
