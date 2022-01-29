@@ -28,6 +28,14 @@ pipeline {
                     }
                 }
             }
+            post{
+                success{
+                    slackSend channel: 'U02MXGDEZT5', color: 'good', message: "[Fernando Peña] [${JOB_NAME}] [${BUILD_TAG}] Ejecucion Exitosa", teamDomain: 'dipdevopsusac-tr94431', tokenCredentialId: 'slack'
+                }
+                failure{
+                    slackSend channel: 'U02MXGDEZT5', color: 'danger', message: "[Fernando Peña] [${env.JOB_NAME}] [${BUILD_TAG}] Ejecucion fallida en stage [${env.TAREA}]", teamDomain: 'dipdevopsusac-tr94431', tokenCredentialId: 'slack'
+                }
+            }
         }
     }
 }
