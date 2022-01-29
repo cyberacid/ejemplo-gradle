@@ -5,8 +5,7 @@
 */
 def call(){
   stage("Paso 1: Compliar"){
-      env.TAREA = env.STAGE_NAME
-      sh "echo ${TAREA} = ${env.STAGE_NAME} = ${env.TAREA}"
+      TAREA = env.STAGE_NAME
       sh "mvn clean compile -e"
   }
   stage("Paso 2: Testear"){
